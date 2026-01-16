@@ -31,17 +31,14 @@ dependencies = [
 ]
 
 [project.urls]
-#"Homepage"    = "https://github.com/NorthernSec/WebImport"
-#"Bug Reports" = "https://github.com/NorthernSec/WebImport/issues"
-#"Source"      = "https://github.com/NorthernSec/WebImport"
-
-#[project.scripts]
-#webimport-server = "webimport.server:run"
-
+"Homepage"    = "https://github.com/NorthernSec/OpenAI-Shim"
+"Bug Reports" = "https://github.com/NorthernSec/OpenAI-Shim/issues"
+"Source"      = "https://github.com/NorthernSec/OpenAI-Shim"
 
 [build-system]
 requires      = ["setuptools>=43.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools]
-packages = ["openai_shim"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["openai_shim*"]
